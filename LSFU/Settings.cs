@@ -41,7 +41,8 @@ namespace LSFU
             {
                 if (form.Name == "StartScreen")
                 {
-                    form.Location = Location;
+                    Point p = Location;
+                    form.Location = p;
                     form.Show();
                 }
             }
@@ -59,7 +60,8 @@ namespace LSFU
             {
                 if (form.Name == "StartScreen")
                 {
-                    form.Location = Location;
+                    Point p = Location;
+                    form.Location = p;
                     form.Show();
                 }
             }

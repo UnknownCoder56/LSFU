@@ -21,8 +21,9 @@ namespace LSFU
             Application.SetCompatibleTextRenderingDefault(false);
             StartScreen start = new StartScreen();
             Settings settings = new Settings();
+            SelectScreen select = new SelectScreen();
             settings.Hide();
-            Form[] forms = { start, settings };
+            Form[] forms = { start, settings, select };
             WindowManager.setWindows(forms);
             refreshUI();
             Application.Run(start);
@@ -37,16 +38,22 @@ namespace LSFU
                     Form window = WindowManager.getWindows()[i];
                     window.BackColor = Color.Black;
                     foreach (Control c in window.Controls)
+                    {
                         if (c is Label)
                             c.ForeColor = Color.White;
+                        c.Font = new Font("Montserrat", 10, FontStyle.Regular);
+                    }
                 }
                 else
                 {
                     Form window = WindowManager.getWindows()[i];
                     window.BackColor = Color.White;
                     foreach (Control c in window.Controls)
+                    {
                         if (c is Label)
                             c.ForeColor = Color.Black;
+                        c.Font = new Font("Montserrat", 10, FontStyle.Regular);
+                    }
                 }
             }
         }

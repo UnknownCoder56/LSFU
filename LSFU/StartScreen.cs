@@ -19,7 +19,16 @@ namespace LSFU
 
         private void startButton_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            foreach (Form form in WindowManager.getWindows())
+            {
+                if (form.Name == "SelectScreen")
+                {
+                    Point p = Location;
+                    form.Location = p;
+                    form.Show();
+                }
+            }
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
@@ -28,7 +37,8 @@ namespace LSFU
             foreach (Form form in WindowManager.getWindows()) {
                 if (form.Name == "Settings")
                 {
-                    form.Location = Location;
+                    Point p = Location;
+                    form.Location = p;
                     form.Show();
                 }
             }
