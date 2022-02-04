@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace LSFU
 {
@@ -19,6 +14,22 @@ namespace LSFU
         public static void setWindows(Form[] formsArray)
         {
             forms = formsArray;
+        }
+
+        public static void showWindow(string windowName, Form caller)
+        {
+            caller.Hide();
+            foreach (Form form in getWindows())
+            {
+                if (form.Name == windowName)
+                {
+                    form.Location = caller.Location;
+                    form.Size = caller.Size;
+                    form.WindowState = caller.WindowState;
+                    form.BringToFront();
+                    form.Show();
+                }
+            }
         }
     }
 }

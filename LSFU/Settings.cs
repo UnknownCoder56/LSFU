@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LSFU
@@ -21,14 +14,22 @@ namespace LSFU
         {
             comboBox1.Items.Add("Dark");
             comboBox1.Items.Add("Light");
+            comboBox1.Items.Add("Images");
 
             if (Program.backColor == "Dark")
             {
                 comboBox1.SelectedItem = comboBox1.Items[0];
+                Program.backgroundManager.timer.Enabled = false;
             } 
-            else
+            else if (Program.backColor == "Light")
             {
                 comboBox1.SelectedItem = comboBox1.Items[1];
+                Program.backgroundManager.timer.Enabled = false;
+            }
+            else if (Program.backColor == "Images")
+            {
+                comboBox1.SelectedItem = comboBox1.Items[2];
+                Program.backgroundManager.timer.Enabled = true;
             }
         }
 
@@ -36,16 +37,7 @@ namespace LSFU
         {
             Program.backColor = comboBox1.SelectedItem.ToString();
             Program.refreshUI();
-            Hide();
-            foreach (Form form in WindowManager.getWindows())
-            {
-                if (form.Name == "StartScreen")
-                {
-                    Point p = Location;
-                    form.Location = p;
-                    form.Show();
-                }
-            }
+            WindowManager.showWindow("StartScreen", this);
         }
 
         private void Settings_Closing(object sender, FormClosingEventArgs e)
@@ -55,16 +47,7 @@ namespace LSFU
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            Hide();
-            foreach (Form form in WindowManager.getWindows())
-            {
-                if (form.Name == "StartScreen")
-                {
-                    Point p = Location;
-                    form.Location = p;
-                    form.Show();
-                }
-            }
+            WindowManager.showWindow("StartScreen", this);
         }
     }
 }
