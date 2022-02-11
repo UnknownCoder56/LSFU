@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LSFU.Screens;
+using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -21,6 +23,7 @@ namespace LSFU
             Settings settings = new Settings();
             SelectScreen select = new SelectScreen();
             Credits credits = new Credits();
+            ContactsScreen contacts = new ContactsScreen();
             settings.Show();
             settings.Hide();
             credits.Show();
@@ -29,7 +32,16 @@ namespace LSFU
             select.Hide();
             start.Show();
             start.Hide();
-            Form[] forms = { start, settings, select, credits };
+            contacts.Show();
+            contacts.Hide();
+            List<Form> forms = new List<Form>
+            {
+                start,
+                settings,
+                select,
+                credits,
+                contacts
+            };
             WindowManager.setWindows(forms);
             refreshUI();
             Application.Run(start);
@@ -38,7 +50,7 @@ namespace LSFU
 
         public static void refreshBackground(Image img)
         {
-            for (int i = 0; i < WindowManager.getWindows().Length; i++)
+            for (int i = 0; i < WindowManager.getWindows().Count; i++)
             {
                 Form window = WindowManager.getWindows()[i];
                 window.BackgroundImage = img;
@@ -48,7 +60,7 @@ namespace LSFU
 
         public static void refreshUI()
         {
-            for (int i = 0; i < WindowManager.getWindows().Length; i++)
+            for (int i = 0; i < WindowManager.getWindows().Count; i++)
             {
                 if (backColor == "Dark")
                 {

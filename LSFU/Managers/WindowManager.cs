@@ -1,17 +1,18 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace LSFU
 {
     internal class WindowManager
     {
-        static Form[] forms;
+        static List<Form> forms;
 
-        public static Form[] getWindows()
+        public static List<Form> getWindows()
         {
             return forms;
         }
 
-        public static void setWindows(Form[] formsArray)
+        public static void setWindows(List<Form> formsArray)
         {
             forms = formsArray;
         }
@@ -30,6 +31,16 @@ namespace LSFU
                     form.Show();
                 }
             }
+        }
+
+        public static void showMyWindow(Form form, Form caller)
+        {
+            caller.Hide();
+            form.Location = caller.Location;
+            form.Size = caller.Size;
+            form.WindowState = caller.WindowState;
+            form.BringToFront();
+            form.Show();
         }
     }
 }

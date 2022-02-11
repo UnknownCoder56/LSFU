@@ -29,5 +29,10 @@ namespace LSFU
         {
             WindowManager.showWindow("Credits", this);
         }
+
+        private void contactButton_Click(object sender, EventArgs e)
+        {
+            WindowManager.showWindow("ContactsScreen", this);
+        }
     }
 }

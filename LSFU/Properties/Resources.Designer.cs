@@ -73,6 +73,26 @@ namespace LSFU.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap discord {
+            get {
+                object obj = ResourceManager.GetObject("discord", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gmail {
+            get {
+                object obj = ResourceManager.GetObject("gmail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image1 {
             get {
                 object obj = ResourceManager.GetObject("image1", resourceCulture);
@@ -136,6 +156,79 @@ namespace LSFU.Properties {
         internal static System.Drawing.Bitmap telescope {
             get {
                 object obj = ResourceManager.GetObject("telescope", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to We often refer to our expanding universe with one simple word: space. But where does space begin and, more importantly, what is it?        ///        ///Space is an almost perfect vacuum, nearly void of matter and with extremely low pressure. In space, sound doesn&apos;t carry because there aren&apos;t molecules close enough together to transmit sound between them. Not quite empty, bits of gas, dust and other matter floats around &quot;emptier&quot; areas of the universe, while more crowded regions can host planets, stars and galaxies.        ///        ///From our  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string tp1 {
+            get {
+                return ResourceManager.GetString("tp1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Solar System is the gravitationally bound system of the Sun and the objects that orbit it. Of the bodies that orbit the Sun directly, the largest are the four gas and ice giants and the four terrestrial planets, followed by an unknown number of dwarf planets and innumerable small Solar System bodies. Of the bodies that orbit the Sun indirectly—the natural satellites—two are larger than Mercury and one is nearly as large..
+        /// </summary>
+        internal static string tp2 {
+            get {
+                return ResourceManager.GetString("tp2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as visible light and infrared radiation. Its diameter is about 1.39 million kilometres (864,000 miles), or 109 times that of Earth. It holds 99.8 percent of the solar system&apos;s mass and is roughly 109 times the diameter of the Earth, about one million Earths could fit inside the sun. Though massive, the Sun still isn’t [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string tp3 {
+            get {
+                return ResourceManager.GetString("tp3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Earth is our home planet. Scientists believe Earth and its moon formed around the same time as the rest of the solar system. They think that was about 4.5 billion years ago. Earth is the fifth-largest planet in the solar system. Its diameter is about 8,000 miles. And Earth is the third-closest planet to the sun. Its average distance from the sun is about 93 million miles. Only Mercury and Venus are closer..
+        /// </summary>
+        internal static string tp4 {
+            get {
+                return ResourceManager.GetString("tp4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The region of interplanetary space between the orbits of Mars and Jupiter in which most asteroids are found Examples of asteroid belt in a Sentence Recent Examples on the Web Psyche, a large object in the asteroid belt between Mars and Jupiter, appears to be made mostly of iron and other metals..
+        /// </summary>
+        internal static string tp5 {
+            get {
+                return ResourceManager.GetString("tp5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A disk-shaped region in the outer solar system, containing thousands of small, icy celestial bodies. Comets that make one complete orbit of the sun in less than 200 years come from this area. The Kuiper belt lies beyond the orbit of Neptune and includes Pluto, which was traditionally classed with the planets..
+        /// </summary>
+        internal static string tp6 {
+            get {
+                return ResourceManager.GetString("tp6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Oort cloud, sometimes called the Öpik–Oort cloud, first described in 1950 by the Dutch astronomer Jan Oort, is a theoretical concept of a cloud of predominantly icy planetesimals proposed to surround the Sun at distances ranging from 2,000 to 200,000 AU. It is divided into two regions: a disc-shaped inner Oort cloud and a spherical outer Oort cloud. Both regions lie beyond the heliosphere and in interstellar space..
+        /// </summary>
+        internal static string tp7 {
+            get {
+                return ResourceManager.GetString("tp7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap youtube {
+            get {
+                object obj = ResourceManager.GetObject("youtube", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

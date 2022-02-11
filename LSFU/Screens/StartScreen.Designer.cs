@@ -32,9 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.creditsButton = new LSFU.RoundedButton();
-            this.buttonExit = new LSFU.RoundedButton();
             this.startButton = new LSFU.RoundedButton();
             this.settingsButton = new LSFU.RoundedButton();
+            this.buttonExit = new LSFU.RoundedButton();
+            this.contactButton = new LSFU.RoundedButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,64 +60,46 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 560F));
             this.tableLayoutPanel1.Controls.Add(this.creditsButton, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.buttonExit, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.startButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.settingsButton, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 190);
+            this.tableLayoutPanel1.Controls.Add(this.buttonExit, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.contactButton, 0, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 165);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(560, 160);
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(560, 185);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // creditsButton
             // 
             this.creditsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.creditsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.creditsButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.creditsButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.creditsButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.creditsButton.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.creditsButton.BorderRadius = 11;
             this.creditsButton.BorderSize = 3;
             this.creditsButton.FlatAppearance.BorderSize = 0;
             this.creditsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.creditsButton.ForeColor = System.Drawing.Color.White;
-            this.creditsButton.Location = new System.Drawing.Point(130, 83);
+            this.creditsButton.Location = new System.Drawing.Point(130, 77);
             this.creditsButton.Name = "creditsButton";
-            this.creditsButton.Size = new System.Drawing.Size(300, 34);
+            this.creditsButton.Size = new System.Drawing.Size(300, 31);
             this.creditsButton.TabIndex = 6;
             this.creditsButton.Text = "Credits";
             this.creditsButton.TextColor = System.Drawing.Color.White;
             this.creditsButton.UseVisualStyleBackColor = false;
             this.creditsButton.Click += new System.EventHandler(this.creditsButton_Click);
             // 
-            // buttonExit
-            // 
-            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.buttonExit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.buttonExit.BorderColor = System.Drawing.Color.DarkSlateBlue;
-            this.buttonExit.BorderRadius = 11;
-            this.buttonExit.BorderSize = 3;
-            this.buttonExit.FlatAppearance.BorderSize = 0;
-            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(130, 123);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(300, 34);
-            this.buttonExit.TabIndex = 7;
-            this.buttonExit.Text = "Exit Application";
-            this.buttonExit.TextColor = System.Drawing.Color.White;
-            this.buttonExit.UseVisualStyleBackColor = false;
-            this.buttonExit.Click += new System.EventHandler(this.exitButton_Click);
-            // 
             // startButton
             // 
             this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.startButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.startButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.startButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.startButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.startButton.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.startButton.BorderRadius = 11;
             this.startButton.BorderSize = 3;
@@ -125,7 +108,7 @@
             this.startButton.ForeColor = System.Drawing.Color.White;
             this.startButton.Location = new System.Drawing.Point(130, 3);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(300, 34);
+            this.startButton.Size = new System.Drawing.Size(300, 31);
             this.startButton.TabIndex = 4;
             this.startButton.Text = "Start Learning";
             this.startButton.TextColor = System.Drawing.Color.White;
@@ -135,22 +118,62 @@
             // settingsButton
             // 
             this.settingsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.settingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.settingsButton.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.settingsButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.settingsButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
             this.settingsButton.BorderColor = System.Drawing.Color.DarkSlateBlue;
             this.settingsButton.BorderRadius = 11;
             this.settingsButton.BorderSize = 3;
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.ForeColor = System.Drawing.Color.White;
-            this.settingsButton.Location = new System.Drawing.Point(130, 43);
+            this.settingsButton.Location = new System.Drawing.Point(130, 40);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(300, 34);
+            this.settingsButton.Size = new System.Drawing.Size(300, 31);
             this.settingsButton.TabIndex = 5;
             this.settingsButton.Text = "Settings";
             this.settingsButton.TextColor = System.Drawing.Color.White;
             this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.buttonExit.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonExit.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.buttonExit.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.buttonExit.BorderRadius = 11;
+            this.buttonExit.BorderSize = 3;
+            this.buttonExit.FlatAppearance.BorderSize = 0;
+            this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExit.ForeColor = System.Drawing.Color.White;
+            this.buttonExit.Location = new System.Drawing.Point(130, 151);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(300, 31);
+            this.buttonExit.TabIndex = 7;
+            this.buttonExit.Text = "Exit Application";
+            this.buttonExit.TextColor = System.Drawing.Color.White;
+            this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // contactButton
+            // 
+            this.contactButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.contactButton.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.contactButton.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.contactButton.BorderColor = System.Drawing.Color.DarkSlateBlue;
+            this.contactButton.BorderRadius = 10;
+            this.contactButton.BorderSize = 2;
+            this.contactButton.FlatAppearance.BorderSize = 0;
+            this.contactButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.contactButton.ForeColor = System.Drawing.Color.White;
+            this.contactButton.Location = new System.Drawing.Point(130, 114);
+            this.contactButton.Name = "contactButton";
+            this.contactButton.Size = new System.Drawing.Size(300, 31);
+            this.contactButton.TabIndex = 8;
+            this.contactButton.Text = "Contact Us";
+            this.contactButton.TextColor = System.Drawing.Color.White;
+            this.contactButton.UseVisualStyleBackColor = false;
+            this.contactButton.Click += new System.EventHandler(this.contactButton_Click);
             // 
             // pictureBox1
             // 
@@ -196,6 +219,7 @@
         private RoundedButton settingsButton;
         private RoundedButton creditsButton;
         private RoundedButton buttonExit;
+        private RoundedButton contactButton;
     }
 }
 

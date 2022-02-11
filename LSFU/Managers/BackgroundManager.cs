@@ -30,12 +30,14 @@ namespace LSFU
             {
                 if (index < Images.Length)
                 {
+                    Thread.Sleep(2000);
                     currentImage = Images[index];
                     Program.refreshBackground(Images[index]);
                     index++;
                 }
                 else
                 {
+                    Thread.Sleep(2000);
                     index = 0;
                     currentImage = Images[index];
                     Program.refreshBackground(Images[index]);
@@ -50,12 +52,14 @@ namespace LSFU
             {
                 if (index < Images.Length)
                 {
+                    Thread.Sleep(2000);
                     currentImage = Images[index];
                     Program.refreshBackground(Images[index]);
                     index++;
                 }
                 else
                 {
+                    Thread.Sleep(2000);
                     index = 0;
                     currentImage = Images[index];
                     Program.refreshBackground(Images[index]);

@@ -86,47 +86,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackgroundManager.cs" />
-    <Compile Include="Credits.cs">
+    <Compile Include="Classes\TopicButtonClickListenerData.cs" />
+    <Compile Include="Classes\ViewModel.cs" />
+    <Compile Include="Managers\BackgroundManager.cs" />
+    <Compile Include="Screens\ContactsScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Credits.Designer.cs">
+    <Compile Include="Screens\ContactsScreen.Designer.cs">
+      <DependentUpon>ContactsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Credits.Designer.cs">
       <DependentUpon>Credits.cs</DependentUpon>
     </Compile>
-    <Compile Include="RoundedButton.cs">
+    <Compile Include="Classes\RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SelectScreen.cs">
+    <Compile Include="Screens\SelectScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectScreen.Designer.cs">
+    <Compile Include="Screens\SelectScreen.Designer.cs">
       <DependentUpon>SelectScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings.cs">
+    <Compile Include="Screens\Settings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
+    <Compile Include="Screens\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="StartScreen.cs">
+    <Compile Include="Screens\StartScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartScreen.Designer.cs">
+    <Compile Include="Screens\StartScreen.Designer.cs">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WindowManager.cs" />
-    <EmbeddedResource Include="Credits.resx">
+    <Compile Include="Managers\WindowManager.cs" />
+    <Compile Include="Screens\TopicLearnScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\TopicLearnScreen.Designer.cs">
+      <DependentUpon>TopicLearnScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Screens\ContactsScreen.resx">
+      <DependentUpon>ContactsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Credits.resx">
       <DependentUpon>Credits.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectScreen.resx">
+    <EmbeddedResource Include="Screens\SelectScreen.resx">
       <DependentUpon>SelectScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
+    <EmbeddedResource Include="Screens\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartScreen.resx">
+    <EmbeddedResource Include="Screens\StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -139,6 +156,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Screens\TopicLearnScreen.resx">
+      <DependentUpon>TopicLearnScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="LSFU_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -178,6 +198,9 @@
     <None Include="resources\image4.png" />
     <None Include="resources\image5.png" />
     <None Include="resources\image6.png" />
+    <None Include="resources\gmail.png" />
+    <None Include="resources\discord.png" />
+    <None Include="resources\youtube.png" />
     <Content Include="telescope.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
