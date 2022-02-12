@@ -1,7 +1,7 @@
-﻿using LSFU.Screens;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace LSFU
@@ -11,6 +11,15 @@ namespace LSFU
         public static string backColor = "Images";
         public static BackgroundManager backgroundManager = new BackgroundManager();
 
+        /// Font stuff
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
+            IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
+
+        private static PrivateFontCollection fonts = new PrivateFontCollection();
+        static Font customFont;
+        /// End Stuff
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,6 +28,18 @@ namespace LSFU
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            /// Setting up custom font
+            byte[] fontData = Properties.Resources.Montserrat_Bold;
+            IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
+            System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
+            uint dummy = 0;
+            fonts.AddMemoryFont(fontPtr, Properties.Resources.Montserrat_Bold.Length);
+            AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.Montserrat_Bold.Length, IntPtr.Zero, ref dummy);
+            System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
+            customFont = new Font(fonts.Families[0], 10, FontStyle.Bold);
+            /// 
+
             StartScreen start = new StartScreen();
             Settings settings = new Settings();
             SelectScreen select = new SelectScreen();
@@ -74,7 +95,7 @@ namespace LSFU
                             c.ForeColor = Color.White;
                             c.BackColor = Color.Transparent;
                         }
-                        c.Font = new Font("Montserrat", 10, FontStyle.Bold);
+                        c.Font = customFont;
                     }
                 }
                 else if (backColor == "Light")
@@ -89,7 +110,7 @@ namespace LSFU
                             c.ForeColor = Color.Black;
                             c.BackColor = Color.Transparent;
                         }
-                        c.Font = new Font("Montserrat", 10, FontStyle.Bold);
+                        c.Font = customFont;
                     }
                 }
                 else if (backColor == "Images")
@@ -102,7 +123,7 @@ namespace LSFU
                             c.ForeColor = Color.White;
                             c.BackColor = Color.Transparent;
                         }
-                        c.Font = new Font("Montserrat", 10, FontStyle.Bold);
+                        c.Font = customFont;
                     }
                 }
             }

@@ -177,6 +177,7 @@
     <None Include="resources\background.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="resources\Montserrat-Bold.ttf" />
     <None Include="resources\telescope.png" />
   </ItemGroup>
   <ItemGroup>
